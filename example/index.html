@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8"/>
+    <title>Angular Bootstrap Draggable Modal</title>
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/ng-draggable-dialog.css"/>
+
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../lib/angular/angular.min.js"></script>
+    <script src="../dist/ng-draggable-dialog.js"></script>
+
+</head>
+<body ng-controller="dragCtrl">
+<div class="container">
+    <div class="page-header">
+        <h2>bootstrap modal draggable with angular.js, touch enabled</h2>
+    </div>
+    <a class="btn btn-primary btn-lg" data-toggle="modal" href="#myModal">Launch draggable modal</a>
+
+<div class="modal fade" draggable-dialog id="myModal" role="dialog" data-backdrop="static" show="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+                <h4 class="modal-title">Drag me</h4>
+            </div>
+            <div class="modal-body">
+                <p>draggable modal</p>
+                <small>btw: if you drag me around, close and reopen me i will appear
+                    where you left me off. At least in Chrome, it seems.
+                </small>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                <button class="btn btn-primary" type="button">Whatever</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    angular.module('myApp', ['ng-draggable-dialog'])
+        .controller('dragCtrl', function($scope) {
+            console.log('run in drag ctrl');
+        })
+        /*.directive('draggableDialog', function ($document) {
+            return function (scope, element) {
+                var startX = 0,
+                        startY = 0,
+                        x = 0,
+                        y = 0;
+                element.css({
+                    position: 'fixed',
+                    cursor: 'move'
+                });
+                element.on('mousedown', function (event) {
+                    // Prevent default dragging of selected content
+                    event.preventDefault();
+                    startX = event.screenX - x;
+                    startY = event.screenY - y;
+                    $document.on('mousemove', mousemove);
+                    $document.on('mouseup', mouseup);
+                });
+
+                function mousemove(event) {
+                    y = event.screenY - startY;
+                    x = event.screenX - startX;
+                    element.css({
+                        top: y + 'px',
+                        left: x + 'px'
+                    });
+                }
+
+                function mouseup() {
+                    $document.unbind('mousemove', mousemove);
+                    $document.unbind('mouseup', mouseup);
+                }
+            };
+        })*/
+    ;
+</script>
+</body>
+</html>

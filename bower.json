@@ -1,0 +1,25 @@
+{
+  "name": "ng-bootstrap-draggable-dialog",
+  "version": "1.0.1",
+  "homepage": "https://github.com/Coralma/ng-bootstrap-draggable-dialog",
+  "authors": [
+    "Coral <maqujun@yahoo.com>"
+  ],
+  "description": "A draggable diablog solution for angularJs + bootstrap",
+  "keywords": [
+    "angular",
+    "dialog"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5"
+  }
+}

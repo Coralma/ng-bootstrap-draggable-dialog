@@ -1,0 +1,12 @@
+/* tweaks to get rid of some annoying stuff */
+.modal {
+    overflow: visible;
+}
+
+.modal-backdrop {
+    background-color: #f1f1f1;
+}
+
+.modal:focus {
+    outline: 0;
+}
